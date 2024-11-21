@@ -1,0 +1,15 @@
+trigger:
+- main  # main 브랜치에 커밋 시 자동 실행
+
+pool:
+  name: hyundaipool  # Self-hosted Agent Pool 이름
+
+steps:
+- script: echo "Building the application..."
+  displayName: "Build Step"
+
+- script: echo "Running tests..."
+  displayName: "Test Step"
+
+- script: echo "Deploying the application..."
+  displayName: "Deploy Step"
